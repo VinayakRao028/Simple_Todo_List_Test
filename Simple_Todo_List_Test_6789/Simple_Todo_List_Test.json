@@ -1,0 +1,59 @@
+{
+  "appName": "Simple Todo List",
+  "version": "1.0.0",
+  "description": "A simple todo list application with main tasks and inner tasks",
+  "frontend": {
+    "framework": "Vanilla JavaScript",
+    "entryPoint": "src/script.js",
+    "styles": "src/styles/style.css",
+    "htmlTemplate": "public/index.html",
+    "dependencies": [
+      "Bootstrap 4.5.0",
+      "jQuery 3.5.1 (slim)",
+      "Popper.js 1.16.0",
+      "Font Awesome"
+    ]
+  },
+  "backend": {
+    "language": "Python",
+    "entryPoint": "src/prep.py",
+    "dependencies": [
+      "pycodestyle"
+    ]
+  },
+  "testing": {
+    "frontend": {
+      "framework": "Jest",
+      "testFiles": [
+        "tests/test_script.js"
+      ]
+    },
+    "backend": {
+      "framework": "pytest",
+      "testFiles": [
+        "tests/test_prep.py"
+      ]
+    }
+  },
+  "storage": {
+    "type": "localStorage",
+    "keys": [
+      "tasks",
+      "innerTasks"
+    ]
+  },
+  "features": [
+    "Add main tasks",
+    "Add inner tasks",
+    "Mark tasks as complete",
+    "Delete tasks",
+    "Delete all tasks",
+    "Persistent storage"
+  ],
+  "responsive": true,
+  "theme": {
+    "background": "gradient",
+    "primaryColor": "#007bff",
+    "secondaryColor": "#6c757d"
+  }
+}
