@@ -1,0 +1,16 @@
+# Web Framework
+Flask==2.3.2
+
+# Database ORM
+SQLAlchemy==2.0.15
+
+# CORS handling
+Flask-CORS==3.0.10
+
+# Environment variable management
+python-dotenv==1.0.0
+
+# Code quality tools
+pycodestyle==2.10.0
+
+# Additional dependencies may be required based on specific implementation details

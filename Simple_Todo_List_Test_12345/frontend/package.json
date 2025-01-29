@@ -1,0 +1,21 @@
+{
+  "name": "simple-todo-list",
+  "version": "1.0.0",
+  "description": "A Simple Todo List application",
+  "main": "src/scripts/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.0",
+    "jquery": "^3.6.4"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.2",
+    "vite": "^4.3.5",
+    "@types/jquery": "^3.5.16"
+  }
+}
