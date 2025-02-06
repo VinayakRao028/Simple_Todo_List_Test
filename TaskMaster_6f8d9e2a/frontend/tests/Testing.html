@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster Frontend Tests</title>
+    <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.19.1.css">
+</head>
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+
+    <!-- Include necessary scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../src/script.js"></script>
+    <script src="https://code.jquery.com/qunit/qunit-2.19.1.js"></script>
+
+    <!-- Mock HTML structure for testing -->
+    <div id="qunit-fixture">
+        <input type="text" id="new-task-input">
+        <button id="add-task-btn">Add Task</button>
+        <ul id="task-list"></ul>
+    </div>
+
+    <script>
+        // Mock localStorage
+        const localStorageMock = (function() {
+            let store = {};
+            return {
+                getItem: function(key) {
+                    return store[key] || null;
+                },
+                setItem: function(key, value) {
+                    store[key] = value.toString();
+                },
+                clear: function() {
+                    store = {};
+                }
+            };
+        })();
+
+        Object.defineProperty(window, 'localStorage', { value: localStorageMock });
+
+        QUnit.module('TaskMaster Tests', {
+            beforeEach: function() {
+                localStorage.clear();
+                $('#task-list').empty();
+            }
+        });
+
+        QUnit.test('Adding a new task', function(assert) {
+            $('#new-task-input').val('Test Task');
+            $('#add-task-btn').click();
+
+            assert.equal($('#task-list li').length, 1, 'Task should be added to the list');
+            assert.equal($('#task-list li:first').text().trim(), 'Test Task', 'Task text should match input');
+        });
+
+        QUnit.test('Deleting a task', function(assert) {
+            // Add a task
+            $('#new-task-input').val('Test Task');
+            $('#add-task-btn').click();
+
+            // Delete the task
+            $('.delete-item-btn').click();
+
+            assert.equal($('#task-list li').length, 0, 'Task should be removed from the list');
+        });
+
+        QUnit.test('Checking a task', function(assert) {
+            // Add a task
+            $('#new-task-input').val('Test Task');
+            $('#add-task-btn').click();
+
+            // Check the task
+            $('.check-item-btn').click();
+
+            assert.ok($('#task-list li:first').hasClass('checked'), 'Task should be marked as checked');
+        });
+
+        QUnit.test('Adding an inner task', function(assert) {
+            // Add a main task
+            $('#new-task-input').val('Main Task');
+            $('#add-task-btn').click();
+
+            // Add an inner task
+            $('.add-inner-task-btn').click();
+            $('.inner-task-input').val('Inner Task');
+            $('.add-inner-item-btn').click();
+
+            assert.equal($('.inner-task-list li').length, 1, 'Inner task should be added to the list');
+            assert.equal($('.inner-task-list li:first').text().trim(), 'Inner Task', 'Inner task text should match input');
+        });
+
+        QUnit.test('Persistence of tasks', function(assert) {
+            // Add a task
+            $('#new-task-input').val('Persistent Task');
+            $('#add-task-btn').click();
+
+            // Simulate page reload
+            loadLS();
+
+            assert.equal($('#task-list li').length, 1, 'Task should persist after page reload');
+            assert.equal($('#task-list li:first').text().trim(), 'Persistent Task', 'Task text should persist after page reload');
+        });
+    </script>
+</body>
+</html>
