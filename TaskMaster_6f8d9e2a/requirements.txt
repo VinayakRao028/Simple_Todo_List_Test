@@ -1,0 +1,15 @@
+# Web Framework
+Flask==2.0.1
+
+# Testing
+pytest==6.2.5
+
+# Code Style
+pycodestyle==2.8.0
+
+# Database ORM
+SQLAlchemy==1.4.25
+
+# Other common utilities
+requests==2.26.0
+python-dotenv==0.19.0
