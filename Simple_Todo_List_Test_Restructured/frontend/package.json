@@ -1,0 +1,29 @@
+{
+  "name": "simple-todo-list-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Frontend for Simple Todo List application",
+  "main": "src/script.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --ext .ts,.js"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3"
+  },
+  "devDependencies": {
+    "vite": "^4.0.0",
+    "typescript": "^5.6.0",
+    "eslint": "^8.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "license": "SEE LICENSE IN LICENSE"
+}
