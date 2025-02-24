@@ -1,0 +1,31 @@
+# Web Framework and WSGI Server
+Flask==2.1.0
+gunicorn==20.1.0
+
+# Cloud Services (uncomment the one you're using)
+# boto3==1.18.0  # For AWS
+# google-cloud-storage==1.42.0  # For Google Cloud
+
+# Database and ORM
+SQLAlchemy==1.4.23
+
+# Authentication and Security
+Flask-JWT-Extended==4.3.1
+
+# API Documentation
+Flask-RESTX==0.5.1
+
+# Utility Libraries
+requests==2.26.0
+python-dotenv==0.19.0
+
+# Testing
+pytest==6.2.5
+
+# Code Style and Linting
+pycodestyle==2.8.0
+
+# AI Services
+anthropic==0.2.8
+
+# Add any additional project-specific libraries below

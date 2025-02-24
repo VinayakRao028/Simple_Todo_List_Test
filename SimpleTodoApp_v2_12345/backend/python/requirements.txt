@@ -1,0 +1,26 @@
+# Web Framework
+Flask==2.0.1
+
+# AI Service
+anthropic==0.2.7
+
+# Code Style Checker
+pycodestyle==2.8.0
+
+# WSGI Server
+gunicorn==20.1.0
+
+# Database ORM
+SQLAlchemy==1.4.23
+
+# Testing
+pytest==6.2.5
+
+# API Documentation
+flask-swagger-ui==3.36.0
+
+# Environment Variable Management
+python-dotenv==0.19.0
+
+# HTTP Requests (if not included in anthropic)
+requests==2.26.0
