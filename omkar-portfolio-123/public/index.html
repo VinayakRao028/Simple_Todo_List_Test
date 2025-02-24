@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V Omkareshwar - Portfolio</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/main.js" defer></script>
+</head>
+<body>
+    <nav>
+        <div id="home">
+            <div class="profile_name">
+                V Omkareshwar
+                <div class="contact_info">
+                    <img src="images/envelope.png" alt="Email icon">
+                    omkar@v.com
+                </div>
+                <div class="contact_info">
+                    <img src="images/phone.png" alt="Phone icon">
+                    +91 0000000000
+                </div>
+            </div>
+            <div class="topdiv">
+                <a class="topmenu" href="#about-me">About Me</a>
+                <a class="topmenu" href="#skills">Skills</a>
+                <a class="topmenu" href="#projects">Projects</a>
+                <a class="topmenu" href="#recommendations">Recommendations</a>
+            </div>
+        </div>    
+    </nav>
+
+    <main>
+        <section id="about-me" class="container">
+            <img src="https://cdn.dribbble.com/users/4274213/screenshots/7636870/media/7dd95123f40f605de295f95ed623c9b1.gif" alt="Profile image" class="profile_image">
+            <div>
+                <h1>Hi, I'm V Omkar! &#127774;</h1>
+                <p>
+                    I want to become a full stack developer with good skills in both application and presentation layers.
+                    I want to work on applications and microservices deployed on IBM Cloud. 
+                    I am an avid user of IBM Watson Services and want to work on Watson Assistant, NLU, Sentiment analyzer to name a few.
+                </p>
+            </div>
+        </section>
+                
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="all_skills">
+                <div class="skill">
+                    <img src="images/html5.png" alt="HTML5 icon">
+                    <h6>HTML</h6>
+                    <p>2 years experience</p>
+                </div>
+                <div class="skill">
+                    <img src="images/js.jpeg" alt="JavaScript icon">
+                    <h6>JavaScript</h6>
+                    <p>3 years experience</p>
+                </div>  
+                <div class="skill">
+                    <img src="images/php.png" alt="PHP icon">
+                    <h6>PHP</h6>
+                    <p>1 year experience</p>
+                </div>
+                <div class="skill">
+                    <img src="images/mysql.png" alt="MySQL icon">
+                    <h6>MySQL</h6>
+                    <p>3 years experience</p>
+                </div>
+                <div class="skill">
+                    <img src="images/python.png" alt="Python icon">
+                    <h6>Python</h6>
+                    <p>4 years experience</p>
+                </div>
+                <div class="skill">
+                    <img src="images/c++.png" alt="C++ icon">
+                    <h6>C++</h6>
+                    <p>2 years experience</p>
+                </div>
+            </div>
+        </section>
+            
+        <section id="projects">
+            <h2>Projects</h2>
+            <div id="projects-container" class="projects-container">
+                <div class="project-card">
+                    <h3>Calculator</h3>
+                    <ul>
+                        <li>Developed and deployed a secure and portable calculator for usage of my friends and family using HTML, CSS, JavaScript</li>
+                    </ul>
+                </div>
+                <hr>
+                <div class="project-card">
+                    <h3>Tic-Tac-Toe</h3>
+                    <ul>
+                        <li>Developed and deployed a Tic-Tac-Toe game for entertainment of my friends and family using HTML, CSS, JavaScript</li>
+                    </ul>
+                </div>
+                <hr>
+                <div class="project-card">
+                    <h3>Fashion Website</h3>
+                    <ul>
+                        <li>Created a styled multi-page website for my brother who wants to enter into the fashion industry and integrated it with a shopping cart</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="recommendations">
+            <h2>Recommendations</h2>
+            <div class="all_recommendations" id="all_recommendations">
+                <div class="recommendation">
+                    <span>&#8220;</span>
+                    He takes initiative within a team and has potential to lead the team.
+                    He has a curious mind and asks the right questions. 
+                    For any future projects that need his expertise, I would definitely want to work with him again.
+                    He will be an asset for any organization!
+                    <span>&#8221;</span>
+                </div>
+                <div class="recommendation">
+                    <span>&#8220;</span>
+                    He is a committed resource who has in-depth knowledge about the domain. 
+                    He has a great attitude & is an excellent team player.
+                    He is highly knowledgeable and always goes the extra step to make sure everything is right. 
+                    <span>&#8221;</span>
+                </div>
+                <div class="recommendation">
+                    <span>&#8220;</span>
+                    Omkar is a very quick learner and quickly grasps key concepts of Web development. 
+                    Working with Omkar has been an awesome experience. 
+                    I had worked along with Omkar during the initial phase of our venture which needed Web development.  
+                    <span>&#8221;</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="flex_center">
+                <fieldset>
+                    <legend class="introduction">Leave a Recommendation</legend>          
+                    <input type="text" placeholder="Name (Optional)"> 
+                    <textarea id="new_recommendation" cols="500" rows="10" placeholder="Message"></textarea>
+                    <div class="flex_center">
+                        <button id="recommend_btn" onclick="addRecommendation()">Submit</button>
+                    </div>
+                </fieldset>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="iconbutton">
+            <a href="#home">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" width="63px">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+            </a>
+        </div>
+    </footer>
+
+    <div class="popup" id="popup">
+        <img src="images/checkmark--outline.svg" alt="Checkmark icon">
+        <h3>Thanks for leaving a recommendation!</h3>
+        <button onclick="showPopup(false)">Ok</button>
+    </div>
+</body>
+</html>

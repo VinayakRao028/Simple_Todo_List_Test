@@ -1,0 +1,60 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+
+# JavaScript/Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+/dist
+/build
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+
+# Database
+*.sqlite3
+
+# Temporary files
+*.tmp
+*.bak
+*.cache
+
+# Project-specific
+/public/build/
+/app/__pycache__/
+/tests/__pycache__/
+
+# Ignore Python cache in app subdirectories
+/app/**/__pycache__/
+
+# Ignore test cache
+/tests/**/__pycache__/
+
+# Ignore any local configuration files
+config.local.py
+
+# Ignore coverage reports
+.coverage
+htmlcov/
+
+# Ignore any local development files
+*.dev
