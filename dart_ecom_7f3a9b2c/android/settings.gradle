@@ -1,0 +1,10 @@
+# This file is intentionally left empty as Dart/Flutter projects don't use Gradle for configuration.
+# The equivalent functionality is handled by the pubspec.yaml file and the project structure.
+
+# For Flutter projects:
+# - Dependencies are managed in pubspec.yaml
+# - Project structure is defined by the Flutter framework
+# - Plugins are automatically detected and included by Flutter
+
+# If you need to include custom build settings or dependencies,
+# refer to the pubspec.yaml file in the root of your Flutter project.
